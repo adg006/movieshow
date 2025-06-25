@@ -7,6 +7,7 @@ A full-stack web application where users can search movies, book show tickets, a
 ## 🛠️ Tech Stack
 
 **Frontend:**
+
 - React
 - Tailwind CSS
 - Axios
@@ -14,9 +15,11 @@ A full-stack web application where users can search movies, book show tickets, a
 - Stripe React SDK
 
 **Backend:**
+
 - Node.js
 - Express.js
 - MongoDB (Mongoose)
+- Clerk (User Authentication)
 - Stripe Payments
 - JWT Authentication
 
@@ -25,30 +28,36 @@ A full-stack web application where users can search movies, book show tickets, a
 ## 🚀 Features
 
 ### 🔐 Authentication
+
 - User registration and login
 - JWT-based secure routes
 - Role-based access (User/Admin)
 
 ### 🎞️ Movie Management
+
 - Browse and search movies
 - View movie details and trailers
 - Select date, time, and theater
 
 ### 🎟️ Booking
+
 - Select showtime and seats
 - Book tickets and pay via Stripe
 - View booking confirmation
 
 ### 💳 Stripe Integration
+
 - Stripe Checkout session
 - Payment success/failure handling
 - Secure and PCI-compliant flow
 
 ### 📁 User Dashboard
+
 - View booking history
 
 ### 👑 Admin Features:
+
 - Add/Edit/Delete Movies
 - Add/Edit Showtimes (date, time, city, theater, movie)
 - View All Bookings
-- View Revenue Summary 
+- View Revenue Summary
