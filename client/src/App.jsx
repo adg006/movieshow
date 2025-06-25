@@ -1,5 +1,7 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import MovieDetails from "./pages/MovieDetails";
@@ -8,9 +10,13 @@ import MyBookings from "./pages/MyBookings";
 import Favourite from "./pages/Favourite";
 
 const App = () => {
+  const isAdminRoute = useLocation().pathname.startsWith("/admin");
+
   return (
     <>
-      <Navbar />
+      <Toaster />
+
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
@@ -19,6 +25,7 @@ const App = () => {
         <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="/favourite" element={<Favourite />} />
       </Routes>
+      {!isAdminRoute && <Footer />}
     </>
   );
 };
