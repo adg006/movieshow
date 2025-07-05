@@ -25,26 +25,32 @@ const Navbar = () => {
           className="md:hidden absolute top-6 right-6 w-6 h-6 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         />
+
         <Link
           to="/"
           onClick={() => {
-            scrollTo(0, 0), setIsOpen(false);
+            scrollTo(0, 0);
+            setIsOpen(false);
           }}
         >
           Home
         </Link>
+
         <Link
           to="/movies"
           onClick={() => {
-            scrollTo(0, 0), setIsOpen(false);
+            scrollTo(0, 0);
+            setIsOpen(false);
           }}
         >
           Movies
         </Link>
+
         <Link
           to="/favourite"
           onClick={() => {
-            scrollTo(0, 0), setIsOpen(false);
+            scrollTo(0, 0);
+            setIsOpen(false);
           }}
         >
           Favourite
