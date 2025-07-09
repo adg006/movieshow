@@ -4,6 +4,7 @@ import { Heart, PlayCircleIcon, StarIcon } from "lucide-react";
 import { dummyDateTimeData, dummyShowsData } from "../assets/assets";
 import BlurBG from "../components/BlurBG";
 import timeformat from "../libs/timeFormat";
+import DateSelect from "../components/DateSelect";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -64,7 +65,7 @@ const MovieDetails = () => {
 
             <a
               className="px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-md font-medium cursour-pointer active:scale-95"
-              href=""
+              href="#dateSelect"
             >
               Buy Tickets
             </a>
@@ -92,6 +93,8 @@ const MovieDetails = () => {
           ))}
         </div>
       </div>
+
+      <DateSelect dateTime={show.dateTime} id={id} />
     </div>
   ) : (
     <div>Test</div>
