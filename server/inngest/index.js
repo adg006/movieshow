@@ -1,5 +1,5 @@
 import { Inngest } from "inngest";
-import User from "../models/User";
+import User from "../models/User.js";
 
 // CREATE A CLIENT TO SEND AND RECIEVE EVENTS
 export const inngest = new Inngest({ id: "movie-ticket-booking" });
